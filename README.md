@@ -115,6 +115,8 @@ La tabla creada es:
 - Productos
 
 ---
+Evidencia de que guarda la base de datos 
+![BD](Evidencias/bd.png)
 
 # Autor
 
