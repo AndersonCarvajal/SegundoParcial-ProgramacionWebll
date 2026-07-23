@@ -48,7 +48,7 @@ dotnet run
 5. Abrir Swagger.
 
 ```
-[http://localhost:5201/Swagger/index.html]
+http://localhost:5201/Swagger/index.html
 ```
 
 ---
