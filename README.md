@@ -26,12 +26,14 @@ API REST desarrollada con **ASP.NET Core Web API**, **Entity Framework Core**, *
 1. Clonar el repositorio.
 
 ```bash
-git clone https://github.com/USUARIO/ProductosAPI.git
+git clone https://github.com/AndersonCarvajal/ProductosAPI.git
 ```
 
 2. Configurar la cadena de conexión en **appsettings.json**.
 
-3. Ejecutar las migraciones.
+![JSON](Evidencias/json.png)
+
+4. Ejecutar las migraciones.
 
 ```bash
 dotnet ef database update
