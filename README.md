@@ -1,61 +1,121 @@
-# Productos API
+API Products
 
-API REST para gestionar productos con ASP.NET Core, Entity Framework Core, SQL Server y Swagger.
+API REST desarrollada con **ASP.NET Core Web API**, **Entity Framework Core**, **SQL Server** y **Swagger** para la gestión de productos.
+
+---
+
+## Tecnologías utilizadas
+
+- ASP.NET Core Web API (.NET 9)
+- Entity Framework Core
+- SQL Server
+- Swagger
+
+---
 
 ## Requisitos
+
 - .NET 9 SDK
-- SQL Server (preferiblemente LocalDB o una instancia accesible)
+- SQL Server
+- Visual Studio 2022 o Visual Studio Code
+
+---
 
 ## Configuración
-1. Ajusta la cadena de conexión en appsettings.json si tu SQL Server no usa la instancia local por defecto.
-2. Ejecuta las migraciones:
-   - dotnet ef migrations add InitialCreate
-   - dotnet ef database update
-3. Inicia la API:
-   - dotnet run
-4. Abre Swagger en: https://localhost:5001/swagger/index.html o http://localhost:5000/swagger/index.html
+
+1. Clonar el repositorio.
+
+```bash
+git clone https://github.com/USUARIO/ProductosAPI.git
+```
+
+2. Configurar la cadena de conexión en **appsettings.json**.
+
+3. Ejecutar las migraciones.
+
+```bash
+dotnet ef database update
+```
+
+4. Ejecutar el proyecto.
+
+```bash
+dotnet run
+```
+
+5. Abrir Swagger.
+
+```
+https://localhost:xxxx/swagger
+```
+
+---
 
 ## Endpoints
-- GET /api/productos
-- GET /api/productos/{id}
-- GET /api/productos/buscar?nombre=nombre_producto
-- POST /api/productos
-- PUT /api/productos/{id}
-- DELETE /api/productos/{id}
 
-## Evidencias de prueba
+| Método | Endpoint |
+|---------|----------|
+| GET | /api/productos |
+| GET | /api/productos/{id} |
+| POST | /api/productos |
+| PUT | /api/productos/{id} |
+| DELETE | /api/productos/{id} |
+| GET | /api/productos/buscar?nombre=producto |
 
-### GET /api/productos
-- Respuesta esperada: 200 OK con una lista de productos.
+---
 
-### GET /api/productos/1
-- Respuesta esperada: 200 OK con el producto solicitado.
+# Evidencias
 
-### POST /api/productos
-Ejemplo de body:
-```json
-{
-  "nombre": "Laptop",
-  "descripcion": "Laptop para desarrollo",
-  "precio": 1200,
-  "stock": 10
-}
+## 1. GET Productos
+
+![GET](Evidencias/get.png)
+
+---
+
+## 2. GET por ID
+
+![GET ID](Evidencias/getid.png)
+
+---
+
+## 3. POST
+
+![POST](Evidencias/post.png)
+
+---
+
+## 4. PUT
+
+![PUT](Evidencias/put.png)
+
+---
+
+## 5. DELETE
+
+![DELETE](Evidencias/delete.png)
+
+---
+
+## 6. Buscar
+
+![Buscar](Evidencias/buscar.png)
+
+---
+
+# Base de datos
+
+La base de datos fue creada mediante **Entity Framework Core Migrations** utilizando el comando:
+
+```bash
+dotnet ef database update
 ```
 
-### PUT /api/productos/1
-Ejemplo de body:
-```json
-{
-  "id": 1,
-  "nombre": "Laptop Gamer",
-  "descripcion": "Laptop para desarrollo y gaming",
-  "precio": 1450,
-  "stock": 8
-}
-```
+La tabla creada es:
 
-### DELETE /api/productos/1
-- Respuesta esperada: 204 No Content.
+- Productos
 
-### GET /api/productos/buscar?nombre=lap
-- Respuesta esperada: 200 OK con coincidencias parciales.
+---
+
+# Autor
+
+Ander
