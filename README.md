@@ -51,7 +51,9 @@ dotnet run
 http://localhost:5201/Swagger/index.html
 ```
 
+![SWA](Evidencias/swa.png)
 ---
+
 
 ## Endpoints
 
